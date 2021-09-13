@@ -1,0 +1,105 @@
+.header-nav {
+  min-height: 10vh;
+  border-bottom: $complementary-color 3px solid;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: 0.3rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+
+  @include mobileXS {
+    font-size: 0.6rem;
+  }
+}
+
+.first-letter {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.0625rem;
+  line-height: 4.375rem;
+}
+
+.highlight {
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 0.0625rem;
+
+  @include desktop992 {
+    font-size: 1.4rem;
+  }
+
+  @include mobileXS {
+    font-size: 0.8rem;
+  }
+}
+
+.fa {
+  font-size: 2rem;
+}
+
+.menu {
+  @include d_flex-jc_center;
+  text-align: center;
+
+  li {
+    list-style: none;
+
+    @include desktop768 {
+      display: inline-block;
+    }
+  }
+
+  @include mobile {
+    display: none;
+    position: fixed;
+    height: 50vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $secondary-color;
+    transition: top 1s ease;
+  }
+}
+
+.menu-item {
+  display: inline-block;
+  margin: 6px 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: $complementary-color;
+  transition: 0.3s ease;
+}
+.menu-item:hover,
+.contact-icon:hover {
+  border-top: 4px solid $complementary-color;
+  border-bottom: 4px solid $complementary-color;
+  padding: 6px 0;
+  margin: -6px 1rem;
+  cursor: pointer;
+}
+
+.openMenu,
+.closeMenu {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  @include mobile {
+    display: block;
+  }
+}

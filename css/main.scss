@@ -1,0 +1,261 @@
+@import "variables";
+@import "utilities";
+@import "button";
+@import "header";
+@import "footer";
+@import "about&contact";
+@import "contact";
+@import "about";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.menu-item {
+  letter-spacing: 0.2rem;
+}
+
+section {
+  margin: 1rem 0;
+}
+
+body {
+  font: {
+    family: $first-font-family;
+    size: 1.3rem;
+  }
+  background-color: $bg-color;
+}
+
+.page-wrapper {
+  margin: 0 auto;
+
+  @include desktop992 {
+    max-width: 80vw;
+  }
+}
+
+.container {
+  width: 98%;
+  margin: auto;
+}
+/**************************/
+/***** Header, footer *****/
+/**************************/
+
+.header-nav,
+.footer {
+  background: $bg-color;
+  color: $complementary-color;
+}
+
+/************************/
+/***** Introduction *****/
+/************************/
+
+.introduction {
+  @include d_flex-jc_center;
+  min-height: 55vh;
+  background: url(../pic/main_bg.jpg) no-repeat bottom;
+  background-size: cover;
+  opacity: 0.9;
+
+  &-container {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.57);
+    width: 100%;
+    min-height: 55vh;
+  }
+
+  &-box {
+    @include d_flex-jc_center;
+    flex-direction: column;
+    background-color: lighten($main-color, 15%);
+    opacity: 0.8;
+    padding: 2rem;
+    margin: 5rem auto;
+    width: 80vw;
+    min-height: 30vh;
+    border-radius: $general-border;
+
+    @include desktop768 {
+      max-width: 60vw;
+    }
+  }
+
+  &-header {
+    margin: 1rem 0;
+    text-align: center;
+
+    @include desktop768 {
+      font-size: 2.3rem;
+    }
+  }
+
+  &-p {
+    font: {
+      size: 1.1rem;
+      weight: 600;
+    }
+
+    @include desktop768 {
+      font-size: 1.4rem;
+      padding: 0.5rem;
+    }
+  }
+}
+
+/********************/
+/***** Services *****/
+/********************/
+
+.services-provided {
+  @include desktop768 {
+    margin: 1.25rem 0;
+  }
+}
+
+.container-services {
+  @include d_flex-jc_center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.box {
+  padding: 1.5rem;
+  margin: 1.5rem;
+  background-color: $main-color;
+  border-radius: $general-border;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.box-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.box-icon {
+  font-size: 2.5rem;
+  padding: 1rem;
+  color: $secondary-color;
+}
+
+.box-h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+
+  @include desktop768 {
+    font-size: 1.6rem;
+  }
+
+  @include mobileXS {
+    font-size: 5vw;
+  }
+}
+
+.box-p {
+  font-size: 1.2rem;
+  text-align: left;
+
+  @include desktop768 {
+    font-size: 1.3rem;
+  }
+
+  @include mobileXS {
+    font-size: 5vw;
+  }
+}
+
+.box-services {
+  max-width: 21.745rem;
+  min-height: 25rem;
+
+  @include desktop768 {
+    margin: 0.7rem;
+  }
+
+  @include desktop992 {
+    max-width: 23rem;
+  }
+}
+
+/**********************/
+/***** Newsletter *****/
+/**********************/
+
+.newsletter {
+  @include d_flex-jc_center;
+  align-items: center;
+  padding: 15px;
+  background: $secondary-color;
+
+  &-h1,
+  &-p {
+    margin-bottom: 1rem;
+  }
+
+  &-h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    @include mobileXS {
+      font-size: 5vw;
+    }
+  }
+
+  &-p {
+    @include mobileXS {
+      font-size: 5vw;
+    }
+  }
+}
+
+.box-newsletter {
+  @include desktop992 {
+    max-width: 70vw;
+    margin: 0 auto;
+  }
+}
+
+.email {
+  width: 100%;
+}
+
+.newsletter input[type="email"] {
+  display: block;
+  padding: 0.25rem;
+  margin: 0 auto;
+  width: 100%;
+  height: 2rem;
+  border: none;
+  border-radius: $general-border;
+
+  @include desktop768 {
+    width: 80%;
+  }
+}
+
+/****************/
+/***** Gmap *****/
+/****************/
+
+.iframe-gmap {
+  width: 100%;
+  height: 28.125rem;
+  border: 0;
+}
+
+.gmap-h1 {
+  margin: 1rem 0;
+}

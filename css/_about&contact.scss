@@ -1,0 +1,29 @@
+.main-content {
+  background-color: $main-color;
+}
+
+.about-container,
+.contact-container {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  @include desktop992 {
+    width: 75vw;
+  }
+}
+
+.container-title {
+  padding: 1rem;
+  border-bottom: 1px solid $complementary-color;
+  text-align: center;
+}
+
+.container-content {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+
+  @include desktop768 {
+    font-size: 1.4rem;
+  }
+}

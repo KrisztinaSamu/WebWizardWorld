@@ -1,0 +1,29 @@
+%btn {
+  @include d_flex-jc_center;
+  align-items: center;
+  padding: 0 20px;
+  margin: 10px auto;
+  cursor: pointer;
+  border: none;
+  border-radius: $general-border;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+}
+
+.btn-primary {
+  @extend %btn;
+  background: lighten($complementary-color, 20%);
+  color: $main-color;
+  width: 100%;
+  height: 3.375rem;
+
+  @include desktop768 {
+    width: 50%;
+    font-size: 1.5rem;
+  }
+}
+
+.btn-primary:hover {
+  background: darken($complementary-color, 10%);
+}

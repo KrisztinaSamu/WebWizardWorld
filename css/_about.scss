@@ -1,0 +1,55 @@
+.about-text {
+  padding: 0.5rem 0;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "img_1"
+    "text_1"
+    "img_2"
+    "text_2";
+  justify-content: center;
+  grid-row-gap: 1rem 1.5rem;
+
+  @include desktop768 {
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "img_1 text_1"
+      "text_2 img_2";
+  }
+}
+
+.grid-item {
+  max-width: 100vw;
+  padding: 0.25rem 1rem;
+}
+
+.grid-img {
+  width: 100%;
+}
+
+.grid-h2 {
+  margin-bottom: 1rem;
+}
+
+.grid-img_1 {
+  grid-area: img_1;
+}
+.grid-img_2 {
+  grid-area: img_2;
+}
+
+.grid-text_1 {
+  grid-area: text_1;
+}
+
+.grid-text_2 {
+  grid-area: text_2;
+}
+
+.grid-text_1,
+.grid-text_2 {
+  margin-bottom: 4rem;
+}
