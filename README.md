@@ -1,4 +1,4 @@
 # WebWizardWorld
-## Webfejlesztéssel foglalkozó cég weboldala.
+## Webfejlesztéssel foglalkozó cégnek készítettem ezt a weboldalt.
 ### Hosting: https://krisztinasamu.github.io/WebWizardWorld
 
