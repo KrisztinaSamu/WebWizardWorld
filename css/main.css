@@ -12,7 +12,7 @@
   margin: 10px auto;
   cursor: pointer;
   border: none;
-  border-radius: 1rem;
+  border-radius: 20px;
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 0.2rem;
@@ -292,7 +292,7 @@
   font-family: "Manrope", sans-serif;
   padding: 1rem;
   border: none;
-  border-radius: 1rem;
+  border-radius: 20px;
   outline: 0;
 }
 
@@ -317,6 +317,48 @@ textarea.form__input {
   padding: 0.5rem 0;
 }
 
+/*.grid-img_1 {
+  grid-area: img_1;
+}
+.grid-img_2 {
+  grid-area: img_2;
+}
+
+.grid-text_1 {
+  grid-area: text_1;
+}
+
+.grid-text_2 {
+  grid-area: text_2;
+}
+
+.grid-text_1,
+.grid-text_2 {
+  margin-bottom: 4rem;
+}*/
+/*.grid-img_1 {
+  //-ms-grid-row: 1;
+  //-ms-grid-column: 1;
+  grid-area: img_1;
+}
+
+.grid-img_2 {
+  //-ms-grid-row: 3;
+  //-ms-grid-column: 1;
+  grid-area: img_2;
+}
+
+.grid-text_1 {
+  //-ms-grid-row: 2;
+  //-ms-grid-column: 1;
+  grid-area: text_1;
+}
+
+.grid-text_2 {
+  //-ms-grid-row: 4;
+  //-ms-grid-column: 1;
+  grid-area: text_2;
+}*/
 .container-grid {
   display: -ms-grid;
   display: grid;
@@ -348,35 +390,6 @@ textarea.form__input {
 
 .grid-h2 {
   margin-bottom: 1rem;
-}
-
-.grid-img_1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: img_1;
-}
-
-.grid-img_2 {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: img_2;
-}
-
-.grid-text_1 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: text_1;
-}
-
-.grid-text_2 {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: text_2;
-}
-
-.grid-text_1,
-.grid-text_2 {
-  margin-bottom: 4rem;
 }
 
 * {
@@ -477,7 +490,7 @@ body {
   margin: 5rem auto;
   width: 80vw;
   min-height: 30vh;
-  border-radius: 1rem;
+  border-radius: 20px;
 }
 
 @media (min-width: 768px) {
@@ -531,10 +544,13 @@ body {
 }
 
 .box {
-  padding: 1.5rem;
-  margin: 1.5rem;
-  background-color: #aad6ec;
-  border-radius: 1rem;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  background: #2da3e8;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(7%, #2da3e8), to(#67ddd1));
+  background: linear-gradient(0deg, #2da3e8 7%, #67ddd1 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -542,33 +558,52 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.box-header,
+.box-p {
+  width: 100%;
+  background-color: #f5f5f5;
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .box-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 1rem 0;
+  margin-bottom: 25px;
 }
 
 .box-icon {
   font-size: 2.5rem;
   padding: 1rem;
   color: #2a9df4;
+  border-right: solid;
 }
 
 .box-h3 {
   font-size: 1.4rem;
   margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  background: #2da3e8;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(7%, #2da3e8), to(#67ddd1));
+  background: linear-gradient(0deg, #2da3e8 7%, #67ddd1 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -584,8 +619,10 @@ body {
 }
 
 .box-p {
+  height: 100%;
   font-size: 1.2rem;
   text-align: left;
+  padding: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -603,6 +640,8 @@ body {
 .box-services {
   max-width: 21.745rem;
   min-height: 25rem;
+  margin: 2rem;
+  padding: 25px;
 }
 
 @media (min-width: 768px) {
@@ -657,7 +696,7 @@ body {
 
 @media (min-width: 992px) {
   .box-newsletter {
-    max-width: 70vw;
+    width: 90%;
     margin: 0 auto;
   }
 }
@@ -673,7 +712,7 @@ body {
   width: 100%;
   height: 2rem;
   border: none;
-  border-radius: 1rem;
+  border-radius: 20px;
 }
 
 @media (min-width: 768px) {
