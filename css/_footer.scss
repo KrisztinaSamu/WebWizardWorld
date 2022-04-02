@@ -16,6 +16,12 @@
   transition: 0.3s ease;
 }
 
+.contact-icon:hover {
+  padding: 6px 0;
+  margin: -6px 1rem;
+  @include hover;
+}
+
 .footer-text {
   font-size: 1rem;
   margin: 6px 1rem;
