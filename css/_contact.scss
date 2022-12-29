@@ -9,11 +9,6 @@
   }
 }
 
-.content-bg {
-  background: lighten($secondary-color, 20%);
-  padding: 0.5rem;
-}
-
 .form-container {
   @include desktop768 {
     width: 60%;
@@ -34,7 +29,7 @@
   font-family: $first-font-family;
   padding: 1rem;
   border: none;
-  border-radius: $general-border;
+  border-radius: $general-border-radius;
   outline: 0;
 }
 
@@ -46,6 +41,11 @@ textarea.form__input {
   height: 40vh;
   overflow: hidden;
 }
+
+.form__input {
+ box-shadow: $general-box-shadow; 
+}
+
 
 .label {
   padding: 0.5rem 0;

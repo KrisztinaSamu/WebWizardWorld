@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap"
       rel="stylesheet"
     />
     <link
@@ -33,12 +33,12 @@
         <nav class="header-nav" id="myTopnav">
           <div class="container nav-container">
             <div class="logo">
-              <h1>
+              <h1 class="logo_h1">
                 <a href="./index.html">
-                  <span class="highlight">
-                    <span class="first-letter">W</span>eb
-                    <span class="first-letter">W</span>izard
-                    <span class="first-letter">W</span>orld
+                  <span class="logo_highlight">
+                    <span class="logo_first-letter">W</span>eb
+                    <span class="logo_first-letter">W</span>izard
+                    <span class="logo_first-letter">W</span>orld
                   </span>
                 </a>
               </h1>
@@ -99,7 +99,7 @@
             <div class="box box-services">
               <div class="box-header">
                 <i class="fas fa-search box-icon"></i>
-                <h3 class="box-h3">Keresőoptimalizálás (SEO)</h3>
+                <h3 class="box-h3">Kereső-<br>optimalizálás (SEO)</h3>
               </div>
               <p class="box-p">
                 Segítünk, hogy weboldala a Google keresések során, a találati
@@ -123,7 +123,7 @@
         <section class="newsletter">
           <div class="container">
             <div class="box box-newsletter">
-              <div class="box-header">
+              <div class="box-header box-header-newsletter">
                 <h1 class="newsletter-h1">
                   Iratkozzon fel hírlevelünkre, ha..
                 </h1>
@@ -137,6 +137,7 @@
               <form class="email" action="POST">
                 <input
                   type="email"
+                  class="form__input"
                   name="mailAdress"
                   placeholder="Enter email..."
                 />
@@ -165,7 +166,7 @@
           <i class="fas fa-phone-square-alt contact-icon"></i>
         </div>
 
-        <p class="footer-text">Copyright &copy; 2021</p>
+        <p class="footer-text">Copyright &copy; 2022</p>
       </footer>
     </div>
     <script src="./app.js"></script>

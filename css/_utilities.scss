@@ -1,3 +1,6 @@
+/***********************/
+/**** Screen sizes *****/
+
 @mixin desktop768 {
   @media (min-width: 768px) {
     @content;
@@ -6,6 +9,12 @@
 
 @mixin desktop992 {
   @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin desktop1312 {
+  @media (min-width: 1312px) {
     @content;
   }
 }
@@ -22,7 +31,30 @@
   }
 }
 
+/***********************/
+
 @mixin d_flex-jc_center {
   display: flex;
   justify-content: center;
+}
+
+@mixin linear-gradient {
+  background: linear-gradient(0deg, rgba(45,163,232,1) 7%, rgba(103,221,209,1) 100%);
+}
+
+@mixin linearGradient-text {
+  background: rgb(45,163,232);
+  background: linear-gradient(0deg, rgba(45,163,232,1) 7%, rgba(103,221,209,1) 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+    background-clip: text;
+}
+
+@mixin hover {
+  border-top: 4px solid rgba(45,163,232,1);
+  border-bottom: 4px solid rgba(45,163,232,1);
+  //padding: 6px 0;
+  //margin: -6px 1rem;
+  cursor: pointer;
+  
 }
