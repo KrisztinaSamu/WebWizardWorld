@@ -55,72 +55,16 @@ body {
 /***** Header, footer *****/
 /**************************/
 
-.header-nav,
+
 .footer {
-  background: $bg-color;
+  
   color: $complementary-color;
 }
 
-/************************/
-/***** Introduction *****/
-/************************/
+/*.header-nav {
+  background: opacity($color: #394146);
+}*/
 
-.introduction {
-  @include d_flex-jc_center;
-  min-height: 55vh;
-  background: url(../pic/main_bg.jpg) no-repeat bottom;
-  background-size: cover;
-  opacity: 0.9;
-
-  &-container {
-    display: flex;
-    background-color: rgba(0, 0, 0, 0.4);
-    width: 100%;
-    min-height: 55vh;
-  }
-
-  &-box {
-    @include d_flex-jc_center;
-    flex-direction: column;
-    background-color: /*lighten($main-color, 15%);*/#394146;
-    opacity: 0.8;
-    padding: 2rem;
-    margin: 5rem auto;
-    width: 90vw;
-    min-height: 30vh;
-    border-radius: $general-border-radius;
-    box-shadow: $general-box-shadow;
-
-    @include desktop992 {
-    max-width: 60vw;
-    }
-  }
-
-  &-header {
-    text-transform: uppercase;
-    margin: 1rem 0;
-    text-align: center;
-    @include linearGradient-text;
-    @include desktop768 {
-      font-size: 3.5rem;
-      font-weight: 600;
-    }
-  }
-
-  &-p {
-    color: $light-bg;
-    letter-spacing: 0.1;
-    font: {
-      size: 1.1rem;
-      weight: 600;
-    }
-
-    @include desktop768 {
-      font-size: 1.4rem;
-      padding: 0.5rem;
-    }
-  }
-}
 
 /********************/
 /***** Services *****/
