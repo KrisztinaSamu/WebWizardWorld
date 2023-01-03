@@ -45,7 +45,7 @@
 }
 
 .header-nav {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .nav-container {
@@ -56,10 +56,10 @@
 
 .logo {
   padding: 0.8rem;
-  font-size: 1rem;
   cursor: pointer;
 }
 .logo_h1 {
+  font-size: 1.2rem;
   padding: 0 1rem;
 }
 .logo_first-letter {
@@ -104,6 +104,7 @@
 
 .fa {
   font-size: 2rem;
+  color: #2a9df4;
 }
 
 .menu {
@@ -137,7 +138,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*background: $secondary-color;*/
     transition: top 1s ease;
   }
 }
@@ -191,7 +191,7 @@
 .introduction-container {
   display: flex;
   width: 100%;
-  min-height: 55vh;
+  height: 85vh;
 }
 .introduction-box {
   display: flex;
