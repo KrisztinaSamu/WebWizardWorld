@@ -3,7 +3,6 @@
   flex-direction: column;
   text-align: center;
   font-size: 1.1rem;
-  border-top: 3px solid $complementary-color;
 }
 
 .footer-contacts {
@@ -20,6 +19,11 @@
   padding: 6px 0;
   margin: -6px 1rem;
   @include hover;
+}
+
+.contact-icon,
+.footer-text {
+  @include linearGradient-text;
 }
 
 .footer-text {

@@ -28,3 +28,20 @@
 .btn-primary:hover {
   background: lighten($complementary-color, 10%);
 }
+
+.main-about,
+.main-contact {
+  padding: 15px;
+  background: rgb(45, 163, 232);
+  background: linear-gradient(
+    0deg,
+    rgba(45, 163, 232, 1) 7%,
+    rgba(103, 221, 209, 1) 100%
+  );
+}
+
+.container-title {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}

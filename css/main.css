@@ -17,7 +17,7 @@
 
 .btn-primary {
   background: #0755ae;
-  color: #aad6ec;
+  color: #e4edf1;
   width: 100%;
   height: 3.375rem;
 }
@@ -42,10 +42,6 @@
 .overlay {
   background-color: rgba(0, 0, 0, 0.4);
   height: 100vh;
-}
-
-.header-nav {
-  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .nav-container {
@@ -98,7 +94,8 @@
   }
 }
 
-.logo, .logo_h1 {
+.logo,
+.logo_h1 {
   border-radius: 20px;
 }
 
@@ -164,8 +161,8 @@
 .menu-item:hover {
   padding: 6px 0;
   margin: -6px 1rem;
-  border-top: 4px solid rgb(45, 163, 232);
-  border-bottom: 4px solid rgb(45, 163, 232);
+  border-top: 4px solid #2a9df4;
+  border-bottom: 4px solid #2a9df4;
   cursor: pointer;
 }
 
@@ -245,7 +242,6 @@
   flex-direction: column;
   text-align: center;
   font-size: 1.1rem;
-  border-top: 3px solid #03254c;
 }
 
 .footer-contacts {
@@ -261,9 +257,18 @@
 .contact-icon:hover {
   padding: 6px 0;
   margin: -6px 1rem;
-  border-top: 4px solid rgb(45, 163, 232);
-  border-bottom: 4px solid rgb(45, 163, 232);
+  border-top: 4px solid #2a9df4;
+  border-bottom: 4px solid #2a9df4;
   cursor: pointer;
+}
+
+.contact-icon,
+.footer-text {
+  background: rgb(45, 163, 232);
+  background: linear-gradient(0deg, rgb(45, 163, 232) 7%, rgb(103, 221, 209) 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .footer-text {
@@ -293,7 +298,7 @@
 .btn-primary {
   background: linear-gradient(0deg, rgb(45, 163, 232) 7%, rgb(103, 221, 209) 100%);
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.3);
-  color: #aad6ec;
+  color: #e4edf1;
   width: 100%;
   height: 3.375rem;
 }
@@ -306,6 +311,19 @@
 
 .btn-primary:hover {
   background: #053d7d;
+}
+
+.main-about,
+.main-contact {
+  padding: 15px;
+  background: rgb(45, 163, 232);
+  background: linear-gradient(0deg, rgb(45, 163, 232) 7%, rgb(103, 221, 209) 100%);
+}
+
+.container-title {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
 }
 
 .container-content-h2 {
@@ -433,13 +451,11 @@ body {
 /**************************/
 /***** Header, footer *****/
 /**************************/
+.header-nav,
 .footer {
-  color: #03254c;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-/*.header-nav {
-  background: opacity($color: #394146);
-}*/
 /********************/
 /***** Services *****/
 /********************/
@@ -496,11 +512,6 @@ body {
 .box-icon {
   font-size: 2.5rem;
   padding: 1rem;
-  /*color: linear-gradient(
-    0deg,
-    rgba(45, 163, 232, 1) 7%,
-    rgba(103, 221, 209, 1) 100%
-  );*/
   border-right: solid;
 }
 
