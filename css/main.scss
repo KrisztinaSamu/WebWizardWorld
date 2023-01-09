@@ -13,6 +13,25 @@
   padding: 0;
 }
 
+body {
+  font: {
+    family: $first-font-family;
+    size: 1.3rem;
+  }
+  background-color: $bg-color;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.page-wrapper {
+  margin: 0 auto;
+
+  @include desktop1312 {
+  }
+}
+
 h1,
 h2,
 h3,
@@ -29,26 +48,14 @@ a {
 }
 
 section {
-  margin: 1rem 0;
+  margin: 1rem 0.5rem;
 }
 
-body {
-  font: {
-    family: $first-font-family;
-    size: 1.3rem;
-  }
-  background-color: $bg-color;
-}
 
-.page-wrapper {
-  margin: 0 auto;
 
-  @include desktop1312 {
-  }
-}
-
-.container {
-  width: 98%;
+.lineBreak:after {
+  content: '\A';
+  white-space: pre;
 }
 
 /**************************/
@@ -65,7 +72,8 @@ body {
 /********************/
 
 .services-provided {
-  @include d_flex-jc_center;
+  ///////////////////////////
+  //@include d_flex-jc_center;
   @include desktop768 {
     margin: 1.25rem 0;
   }
@@ -73,9 +81,10 @@ body {
 
 .container-services {
   @include d_flex-jc_center;
-  @include desktop992 {
+  ///////////////////////////
+ /* @include desktop992 {
     max-width: 800px;
-  }
+  }*/
   flex-wrap: wrap;
   text-align: center;
 }
@@ -120,7 +129,7 @@ body {
 
 .box-h3 {
   @include linearGradient-text;
-  font-size: 1.4rem;
+  font-size: auto;
   margin-bottom: 1rem;
   padding-left: 0.5rem;
   margin: 0;
@@ -150,7 +159,7 @@ body {
 }
 
 .box-services {
-  width: 21.745rem;
+  max-width: 21.745rem;
   min-height: 25rem;
   margin: 2rem 0.5rem;
   padding: 25px;
@@ -164,7 +173,7 @@ body {
   }
 
   @include desktop992 {
-    max-width: 25rem;
+    width: 25rem;
   }
 }
 
@@ -204,6 +213,10 @@ body {
     margin: 0 auto;
     padding: 25px;
   }
+}
+
+.box-header-newsletter  {
+  height: auto;
 }
 
 .box-newsletter,

@@ -41,7 +41,11 @@
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.4);
-  height: 100vh;
+  height: 100%;
+}
+
+.header-nav {
+  padding: 1rem 1.5rem;
 }
 
 .nav-container {
@@ -51,12 +55,10 @@
 }
 
 .logo {
-  padding: 0.8rem;
   cursor: pointer;
 }
 .logo_h1 {
   font-size: 1.2rem;
-  padding: 0 1rem;
 }
 .logo_first-letter {
   font-family: "Josefin Sans", sans-serif;
@@ -125,6 +127,7 @@
 }
 @media (max-width: 768px) {
   .menu {
+    background-color: black;
     display: none;
     position: fixed;
     height: 50vh;
@@ -141,7 +144,7 @@
 
 .menu-item {
   display: inline-block;
-  margin: 6px 1rem;
+  margin: 6px 0.8rem;
   text-transform: uppercase;
   font-size: 1.4rem;
   font-weight: 600;
@@ -160,7 +163,7 @@
 
 .menu-item:hover {
   padding: 6px 0;
-  margin: -6px 1rem;
+  margin: -6px 0.8rem;
   border-top: 4px solid #2a9df4;
   border-bottom: 4px solid #2a9df4;
   cursor: pointer;
@@ -171,9 +174,9 @@
   display: none;
   font-size: 2rem;
   cursor: pointer;
-  position: absolute;
+  /*position: absolute;
   top: 20px;
-  right: 20px;
+  right: 20px;*/
 }
 @media (max-width: 768px) {
   .openMenu,
@@ -182,13 +185,19 @@
   }
 }
 
+.closeMenu {
+  margin: 1rem;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
 /************************/
 /***** Introduction *****/
 /************************/
 .introduction-container {
   display: flex;
   width: 100%;
-  height: 85vh;
 }
 .introduction-box {
   display: flex;
@@ -210,7 +219,7 @@
 }
 .introduction-header {
   text-transform: uppercase;
-  margin: 1rem 0;
+  margin: 3rem 0;
   text-align: center;
   background: rgb(45, 163, 232);
   background: linear-gradient(0deg, rgb(45, 163, 232) 7%, rgb(103, 221, 209) 100%);
@@ -226,6 +235,7 @@
 }
 .introduction-p {
   color: #f5f5f5;
+  text-align: justify;
   letter-spacing: 0.1;
   font-size: 1.1rem;
   font-weight: 600;
@@ -321,9 +331,8 @@
 }
 
 .container-title {
-  display: flex;
-  justify-content: center;
   margin: 1rem 0;
+  text-align: center;
 }
 
 .container-content-h2 {
@@ -334,13 +343,11 @@
   padding: 1rem 0;
 }
 
-@media (min-width: 768px) {
-  .form-container {
-    width: 60%;
-    margin: 0 auto;
+/*.form-container {
+  @include desktop768 {
+    width: 100%;
   }
-}
-
+}*/
 .form__items {
   display: flex;
   flex-direction: column;
@@ -432,20 +439,25 @@ a {
 }
 
 section {
-  margin: 1rem 0;
+  margin: 1rem 0.5rem;
 }
 
 body {
   font-family: "Manrope", sans-serif;
   font-size: 1.3rem;
   background-color: #e9f4fa;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .page-wrapper {
   margin: 0 auto;
 }
-.container {
-  width: 98%;
+.lineBreak:after {
+  content: "\a";
+  white-space: pre;
 }
 
 /**************************/
@@ -459,10 +471,6 @@ body {
 /********************/
 /***** Services *****/
 /********************/
-.services-provided {
-  display: flex;
-  justify-content: center;
-}
 @media (min-width: 768px) {
   .services-provided {
     margin: 1.25rem 0;
@@ -472,13 +480,11 @@ body {
 .container-services {
   display: flex;
   justify-content: center;
+  /* @include desktop992 {
+     max-width: 800px;
+   }*/
   flex-wrap: wrap;
   text-align: center;
-}
-@media (min-width: 992px) {
-  .container-services {
-    max-width: 800px;
-  }
 }
 
 .box {
@@ -521,7 +527,7 @@ body {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  font-size: 1.4rem;
+  font-size: auto;
   margin-bottom: 1rem;
   padding-left: 0.5rem;
   margin: 0;
@@ -556,7 +562,7 @@ body {
 }
 
 .box-services {
-  width: 21.745rem;
+  max-width: 21.745rem;
   min-height: 25rem;
   margin: 2rem 0.5rem;
   padding: 25px;
@@ -573,7 +579,7 @@ body {
 }
 @media (min-width: 992px) {
   .box-services {
-    max-width: 25rem;
+    width: 25rem;
   }
 }
 
@@ -610,6 +616,10 @@ body {
     margin: 0 auto;
     padding: 25px;
   }
+}
+
+.box-header-newsletter {
+  height: auto;
 }
 
 .box-newsletter,
