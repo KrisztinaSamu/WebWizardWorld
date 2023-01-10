@@ -25,12 +25,12 @@ body {
   overflow-x: hidden;
 }
 
-.page-wrapper {
+/*.page-wrapper {
   margin: 0 auto;
 
   @include desktop1312 {
   }
-}
+}*/
 
 h1,
 h2,
@@ -184,6 +184,7 @@ section {
 .newsletter {
   @include d_flex-jc_center;
   align-items: center;
+  width: 100%;
   padding: 3rem 0;
 
   &-h1,
@@ -242,7 +243,13 @@ section {
   border-radius: $general-border-radius;
 
   @include desktop768 {
-    width: 80%;
+    width: 50%;
+  }
+}
+
+.btn-primary_subscribe {
+  @include desktop768 {
+    width: 50%;
   }
 }
 

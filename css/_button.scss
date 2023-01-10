@@ -13,7 +13,8 @@
 
 .btn-primary {
   @extend %btn;
-  background: lighten($complementary-color, 20%);
+  @include linear-gradient;
+  box-shadow: $general-box-shadow;
   color: $main-color;
   width: 100%;
   height: 3.375rem;
@@ -22,8 +23,15 @@
     width: 50%;
     font-size: 1.5rem;
   }
+
+  @include desktop992 {
+    width: 25%;
+    font-size: 1.7rem;
+  }
 }
 
 .btn-primary:hover {
   background: darken($complementary-color, 10%);
 }
+
+
