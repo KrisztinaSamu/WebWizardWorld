@@ -12,6 +12,7 @@
 
 .header-nav {
   padding: 1rem 1.5rem;
+  height: 10vh;
 }
 
 .nav-container {
@@ -152,21 +153,26 @@
 /************************/
 
 .introduction {
+  margin: 0;
+}
+
+.introduction {
   &-container {
     display: flex;
-    width: 100%;
-    //height: 85vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 0 1rem;
   }
 
   &-box {
     @include d_flex-jc_center;
     flex-direction: column;
-    background-color: #394146;
     opacity: 0.8;
     padding: 2rem;
-    margin: 5rem auto;
-    width: 90vw;
     min-height: 30vh;
+    background-color: #394146;
     border-radius: $general-border-radius;
     box-shadow: $general-box-shadow;
 
@@ -180,6 +186,7 @@
     margin: 3rem 0;
     text-align: center;
     @include linearGradient-text;
+
     @include desktop768 {
       font-size: 3.5rem;
       font-weight: 600;
@@ -190,6 +197,7 @@
     color: $light-bg;
     text-align: justify;
     letter-spacing: 0.1;
+
     font: {
       size: 1.1rem;
       weight: 600;
