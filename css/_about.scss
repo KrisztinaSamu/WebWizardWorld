@@ -23,7 +23,11 @@
 
 .grid-item {
   max-width: 100vw;
-  padding: 0.25rem 1rem;
+  padding: 1rem;
+  @include desktop1440 {
+    width:25vw;
+  }
+
 }
 
 .grid-img {
@@ -32,4 +36,8 @@
 
 .grid-h2 {
   margin-bottom: 1rem;
+}
+
+.grid-p {
+  padding-bottom: 4rem;
 }

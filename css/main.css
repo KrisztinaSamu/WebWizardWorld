@@ -57,6 +57,7 @@
 }
 
 .nav-container {
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -220,16 +221,42 @@
   justify-content: center;
   flex-direction: column;
   opacity: 0.8;
-  padding: 2rem;
-  min-height: 30vh;
-  background-color: #394146;
-  border-radius: 20px;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.3);
 }
 @media (min-width: 992px) {
   .introduction-box {
     max-width: 60vw;
   }
+}
+@media (min-width: 1440px) {
+  .introduction-box {
+    max-width: 40vw;
+  }
+}
+.introduction-box-background {
+  position: relative;
+  background: #020117;
+}
+.introduction-box-background::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+  z-index: -1;
+}
+.introduction-box-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+  z-index: -2;
+  filter: blur(40px);
 }
 .introduction-header {
   text-transform: uppercase;
@@ -250,14 +277,15 @@
 .introduction-p {
   color: #f5f5f5;
   text-align: justify;
-  letter-spacing: 0.1;
+  letter-spacing: 2px;
+  padding: 1rem;
   font-size: 1.1rem;
   font-weight: 600;
 }
 @media (min-width: 768px) {
   .introduction-p {
     font-size: 1.4rem;
-    padding: 0.5rem;
+    padding: 1.5rem;
   }
 }
 
@@ -313,8 +341,20 @@
 }
 
 .container-title {
-  margin: 1rem 0;
+  position: relative;
+  margin: 0 auto;
   text-align: center;
+}
+
+.container-title::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  height: 5px;
+  border-radius: 2px;
+  background: linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
 }
 
 .container-content-h2 {
@@ -389,7 +429,12 @@ textarea.form__input {
 
 .grid-item {
   max-width: 100vw;
-  padding: 0.25rem 1rem;
+  padding: 1rem;
+}
+@media (min-width: 1440px) {
+  .grid-item {
+    width: 25vw;
+  }
 }
 
 .grid-img {
@@ -398,6 +443,10 @@ textarea.form__input {
 
 .grid-h2 {
   margin-bottom: 1rem;
+}
+
+.grid-p {
+  padding-bottom: 4rem;
 }
 
 * {
@@ -429,7 +478,7 @@ h4,
 h5,
 h6,
 .menu-item {
-  letter-spacing: 0.2rem;
+  letter-spacing: 2px;
 }
 
 a {

@@ -16,6 +16,7 @@
 }
 
 .nav-container {
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,8 +50,7 @@
       font-size: 0.8rem;
     }
 
-    @include desktop768 {
-    }
+    @include desktop768 {}
 
     @include desktop992 {
       font-size: 1.3rem;
@@ -170,15 +170,48 @@
     @include d_flex-jc_center;
     flex-direction: column;
     opacity: 0.8;
-    padding: 2rem;
-    min-height: 30vh;
-    background-color: #394146;
-    border-radius: $general-border-radius;
+    //padding: 2rem;
+   //background-color: #394146;
+    // border-radius: $general-border-radius;
     box-shadow: $general-box-shadow;
 
     @include desktop992 {
       max-width: 60vw;
     }
+
+    @include desktop1440 {
+      max-width: 40vw;
+    }
+
+  }
+
+  &-box-background {
+    position: relative;
+    background: #020117;
+
+  }
+
+  &-box-background::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: /*linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2)*/$rainbow-linear-gradient;
+    z-index: -1;
+  }
+
+  &-box-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: /*linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2)*/$rainbow-linear-gradient;
+    z-index: -2;
+    filter: blur(40px);
   }
 
   &-header {
@@ -196,7 +229,8 @@
   &-p {
     color: $light-bg;
     text-align: justify;
-    letter-spacing: 0.1;
+    letter-spacing: 2px;
+    padding: 1rem;
 
     font: {
       size: 1.1rem;
@@ -205,7 +239,7 @@
 
     @include desktop768 {
       font-size: 1.4rem;
-      padding: 0.5rem;
+      padding: 1.5rem;
     }
   }
 }

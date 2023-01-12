@@ -8,6 +8,18 @@
 }
 
 .container-title {
-  margin: 1rem 0;
+  position: relative;
+  margin: 0 auto;
   text-align: center;
+}
+
+.container-title::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  height: 5px;
+  border-radius: 2px;
+  background: $rainbow-linear-gradient;
 }
