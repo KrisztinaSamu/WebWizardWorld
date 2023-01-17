@@ -23,12 +23,10 @@
 }
 
 .logo {
-  //padding: 0.8rem;
   cursor: pointer;
 
   &_h1 {
     font-size: 1.2rem;
-    //padding: 0 1rem;
   }
 
   &_first-letter {
@@ -50,7 +48,8 @@
       font-size: 0.8rem;
     }
 
-    @include desktop768 {}
+    @include desktop768 {
+    }
 
     @include desktop992 {
       font-size: 1.3rem;
@@ -132,9 +131,6 @@
   display: none;
   font-size: 2rem;
   cursor: pointer;
-  /*position: absolute;
-  top: 20px;
-  right: 20px;*/
 
   @include mobile {
     display: block;
@@ -170,9 +166,6 @@
     @include d_flex-jc_center;
     flex-direction: column;
     opacity: 0.8;
-    //padding: 2rem;
-   //background-color: #394146;
-    // border-radius: $general-border-radius;
     box-shadow: $general-box-shadow;
 
     @include desktop992 {
@@ -182,34 +175,32 @@
     @include desktop1440 {
       max-width: 40vw;
     }
-
   }
 
   &-box-background {
     position: relative;
     background: #020117;
-
   }
 
   &-box-background::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -5px;
     left: -5px;
     right: -5px;
     bottom: -5px;
-    background: /*linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2)*/$rainbow-linear-gradient;
+    background: $rainbow-linear-gradient;
     z-index: -1;
   }
 
   &-box-background::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: /*linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2)*/$rainbow-linear-gradient;
+    background: $rainbow-linear-gradient;
     z-index: -2;
     filter: blur(40px);
   }

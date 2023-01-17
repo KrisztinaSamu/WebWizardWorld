@@ -24,8 +24,9 @@
 .grid-item {
   max-width: 100vw;
   padding: 1rem;
+
   @include desktop1440 {
-    width:25vw;
+    width: 25vw;
   }
 
 }

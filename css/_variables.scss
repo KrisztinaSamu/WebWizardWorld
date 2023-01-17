@@ -1,5 +1,6 @@
-$bg-color: #e9f4fa;
-$main-color: /*#aad6ec*/#e4edf1;
+$bg-color: /*#e9f4fa;*/#EEEBEA;
+$main-color:
+  /*#aad6ec*/ #e4edf1;
 $secondary-color: #2a9df4;
 $complementary-color: #03254c;
 $letter-color: #ffffff;
@@ -14,4 +15,10 @@ $linear-gradient: linear-gradient(
   rgba(45, 163, 232, 1) 7%,
   rgba(103, 221, 209, 1) 100%
 );
-$rainbow-linear-gradient: linear-gradient(45deg, #ffd800, #ff5520, #750cf2, #0cbcf2);
+$rainbow-linear-gradient: linear-gradient(
+  45deg,
+  #ffd800,
+  #ff5520,
+  #750cf2,
+  #0cbcf2
+);

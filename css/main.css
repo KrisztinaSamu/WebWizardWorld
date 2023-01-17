@@ -183,9 +183,6 @@
   display: none;
   font-size: 2rem;
   cursor: pointer;
-  /*position: absolute;
-  top: 20px;
-  right: 20px;*/
 }
 @media (max-width: 768px) {
   .openMenu,
@@ -458,19 +455,13 @@ textarea.form__input {
 body {
   font-family: "Manrope", sans-serif;
   font-size: 1.3rem;
-  background-color: #e9f4fa;
+  background-color: #EEEBEA;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-/*.page-wrapper {
-  margin: 0 auto;
-
-  @include desktop1312 {
-  }
-}*/
 h1,
 h2,
 h3,
@@ -515,9 +506,6 @@ section {
 .container-services {
   display: flex;
   justify-content: center;
-  /* @include desktop992 {
-     max-width: 800px;
-   }*/
   flex-wrap: wrap;
   text-align: center;
 }
