@@ -178,6 +178,12 @@
   cursor: pointer;
 }
 
+.date-item {
+  font-size: 2rem;
+  padding: 0.5rem;
+  border: 2px solid rgb(103, 221, 209);
+}
+
 .openMenu,
 .closeMenu {
   display: none;
@@ -186,7 +192,7 @@
 }
 @media (max-width: 768px) {
   .openMenu,
-.closeMenu {
+  .closeMenu {
     display: block;
   }
 }
@@ -332,15 +338,15 @@
 
 .main-about,
 .main-contact {
-  padding: 15px;
+  padding: 1rem;
   background: rgb(45, 163, 232);
   background: linear-gradient(0deg, rgb(45, 163, 232) 7%, rgb(103, 221, 209) 100%);
 }
 
 .container-title {
   position: relative;
-  margin: 0 auto;
   text-align: center;
+  padding-bottom: 1rem;
 }
 
 .container-title::before {
@@ -604,6 +610,11 @@ section {
   .box-services {
     width: 25rem;
   }
+}
+
+.box-services:hover {
+  border-radius: 0;
+  box-shadow: 0;
 }
 
 /**********************/

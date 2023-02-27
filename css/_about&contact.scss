@@ -1,6 +1,6 @@
 .main-about,
 .main-contact {
-  padding: 15px;
+  padding: 1rem;
   background: rgb(45, 163, 232);
   background: linear-gradient(
     0deg,
@@ -11,8 +11,8 @@
 
 .container-title {
   position: relative;
-  margin: 0 auto;
   text-align: center;
+  padding-bottom: 1rem;
 }
 
 .container-title::before {

@@ -63,3 +63,8 @@
   border-bottom: 4px solid $secondary-color;
   cursor: pointer;
 }
+
+@mixin boxHover {
+  border-radius: 0;
+    box-shadow: 0;
+}

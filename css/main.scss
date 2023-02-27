@@ -157,11 +157,17 @@ section {
 
   @include desktop768 {
     margin: 0.7rem;
+
+    
   }
 
   @include desktop992 {
     width: 25rem;
   }
+}
+
+.box-services:hover {
+  @include boxHover;
 }
 
 /**********************/

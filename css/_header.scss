@@ -126,6 +126,12 @@
   @include hover;
 }
 
+.date-item {
+  font-size: 2rem;
+  padding: 0.5rem;
+  border: 2px solid rgba(103, 221, 209, 1);
+}
+
 .openMenu,
 .closeMenu {
   display: none;
