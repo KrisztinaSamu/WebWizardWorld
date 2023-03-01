@@ -12,7 +12,7 @@
 
 .header-nav {
   padding: 1rem 1.5rem;
-  height: 10vh;
+  min-height: 10vh;
 }
 
 .nav-container {
@@ -26,7 +26,7 @@
   cursor: pointer;
 
   &_h1 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   &_first-letter {
@@ -110,13 +110,13 @@
   display: inline-block;
   margin: 6px 0.8rem;
   text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
   transition: 0.3s ease;
   @include linearGradient-text;
 
   @include desktop768 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -175,17 +175,22 @@
     box-shadow: $general-box-shadow;
 
     @include desktop992 {
-      max-width: 60vw;
+      max-width: 70vw;
     }
 
     @include desktop1440 {
-      max-width: 40vw;
+      max-width: 60vw;
     }
   }
 
   &-box-background {
     position: relative;
     background: #020117;
+    padding: 3rem;
+
+    @include desktop768 {
+      padding: 5rem;
+    }
   }
 
   &-box-background::after {
@@ -213,13 +218,14 @@
 
   &-header {
     text-transform: uppercase;
-    margin: 3rem 0;
+    margin: 2rem 0;
     text-align: center;
     @include linearGradient-text;
 
     @include desktop768 {
       font-size: 3.5rem;
       font-weight: 600;
+      margin: 3rem 0;
     }
   }
 
@@ -228,6 +234,7 @@
     text-align: justify;
     letter-spacing: 2px;
     padding: 1rem;
+    line-height: 1.7;
 
     font: {
       size: 1.1rem;
@@ -235,7 +242,7 @@
     }
 
     @include desktop768 {
-      font-size: 1.4rem;
+      font-size: 2.2rem;
       padding: 1.5rem;
     }
   }

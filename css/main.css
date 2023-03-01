@@ -53,10 +53,10 @@
 
 .header-nav {
   padding: 1rem 1.5rem;
+  min-height: 10vh;
 }
 
-.nav-container,
-.local-data-container {
+.nav-container {
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -67,7 +67,7 @@
   cursor: pointer;
 }
 .logo_h1 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 .logo_first-letter {
   font-family: "Josefin Sans", sans-serif;
@@ -155,7 +155,7 @@
   display: inline-block;
   margin: 6px 0.8rem;
   text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
   transition: 0.3s ease;
   background: rgb(45, 163, 232);
@@ -166,7 +166,7 @@
 }
 @media (min-width: 768px) {
   .menu-item {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -228,17 +228,23 @@
 }
 @media (min-width: 992px) {
   .introduction-box {
-    max-width: 60vw;
+    max-width: 70vw;
   }
 }
 @media (min-width: 1440px) {
   .introduction-box {
-    max-width: 40vw;
+    max-width: 60vw;
   }
 }
 .introduction-box-background {
   position: relative;
   background: #020117;
+  padding: 3rem;
+}
+@media (min-width: 768px) {
+  .introduction-box-background {
+    padding: 5rem;
+  }
 }
 .introduction-box-background::after {
   content: "";
@@ -263,7 +269,7 @@
 }
 .introduction-header {
   text-transform: uppercase;
-  margin: 3rem 0;
+  margin: 2rem 0;
   text-align: center;
   background: rgb(45, 163, 232);
   background: linear-gradient(0deg, rgb(45, 163, 232) 7%, rgb(103, 221, 209) 100%);
@@ -275,6 +281,7 @@
   .introduction-header {
     font-size: 3.5rem;
     font-weight: 600;
+    margin: 3rem 0;
   }
 }
 .introduction-p {
@@ -282,12 +289,13 @@
   text-align: justify;
   letter-spacing: 2px;
   padding: 1rem;
+  line-height: 1.7;
   font-size: 1.1rem;
   font-weight: 600;
 }
 @media (min-width: 768px) {
   .introduction-p {
-    font-size: 1.4rem;
+    font-size: 2.2rem;
     padding: 1.5rem;
   }
 }
@@ -459,13 +467,15 @@ textarea.form__input {
 }
 
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: "Manrope", sans-serif, Helvetica, sans-serif;
   font-size: 1.3rem;
   background-color: #EEEBEA;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
+  letter-spacing: 1px;
+  line-height: 1.5;
 }
 
 h1,
@@ -476,6 +486,7 @@ h5,
 h6,
 .menu-item {
   letter-spacing: 2px;
+  line-height: 1.3;
 }
 
 a {

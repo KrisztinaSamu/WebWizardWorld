@@ -24,14 +24,16 @@ let year = today.getFullYear();
 let fullDate = year + ". " + month + ". " + day + ".";
 document.getElementById("date-today").innerHTML = (fullDate);
 
+/* under construction
+
 // current weather
 
-//http://api.weatherapi.com/v1/current.json?key=ff18cdecca3b4e9cb4e221043210812&q=Budapest&api=no
+//http://api.weatherapi.com/v1/current.json?key=...
 
 let target = 'Budapest';
 
 const fetchResults = async(targetLocation) => {
-    let url = `http://api.weatherapi.com/v1/current.json?key=ff18cdecca3b4e9cb4e221043210812&q=${targetLocation}&api=no`;
+    let url = `http://api.weatherapi.com/v1/current.json?key=...=${targetLocation}&api=no`;
     
     const res = await fetch(url);
 
@@ -43,8 +45,9 @@ const fetchResults = async(targetLocation) => {
     let time = data.location.localtime;
     let temp = data.current.temp_c;
     let condition = data.current.condition.text;
-    
+
 }
 
 fetchResults(target);
 
+*/
