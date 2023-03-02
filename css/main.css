@@ -209,6 +209,7 @@
 /************************/
 .introduction {
   margin: 0;
+  max-height: 100%;
 }
 
 .introduction-container {
@@ -216,19 +217,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
   margin: 0 1rem;
+}
+@media (min-width: 768px) {
+  .introduction-container {
+    height: 90vh;
+  }
 }
 .introduction-box {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin: 1rem;
   opacity: 0.8;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.3);
 }
 @media (min-width: 992px) {
   .introduction-box {
     max-width: 70vw;
+    margin: 2rem;
   }
 }
 @media (min-width: 1440px) {
@@ -239,7 +246,7 @@
 .introduction-box-background {
   position: relative;
   background: #020117;
-  padding: 3rem;
+  padding: 1rem;
 }
 @media (min-width: 768px) {
   .introduction-box-background {
@@ -287,16 +294,16 @@
 .introduction-p {
   color: #f5f5f5;
   text-align: justify;
-  letter-spacing: 2px;
   padding: 1rem;
   line-height: 1.7;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 @media (min-width: 768px) {
   .introduction-p {
     font-size: 2.2rem;
     padding: 1.5rem;
+    letter-spacing: 2.5px;
   }
 }
 
@@ -522,7 +529,7 @@ section {
 
 .container-services {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   text-align: center;
 }
@@ -555,18 +562,21 @@ section {
   margin-bottom: 25px;
 }
 
-.box-icon {
-  font-size: 2.5rem;
-  padding: 1rem;
-  border-right: solid;
-}
-
+.box-icon,
 .box-h3 {
   background: rgb(45, 163, 232);
   background: linear-gradient(0deg, rgb(45, 163, 232) 7%, rgb(103, 221, 209) 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+.box-icon {
+  font-size: 2.5rem;
+  padding: 1rem;
+}
+
+.box-h3 {
   font-size: auto;
   margin-bottom: 1rem;
   padding-left: 0.5rem;
@@ -621,11 +631,6 @@ section {
   .box-services {
     width: 25rem;
   }
-}
-
-.box-services:hover {
-  border-radius: 0;
-  box-shadow: 0;
 }
 
 /**********************/
