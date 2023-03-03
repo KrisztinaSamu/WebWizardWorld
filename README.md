@@ -1,4 +1,4 @@
 # WebWizardWorld
 ## Webfejlesztéssel foglalkozó fiktív cégnek készült weboldal.
-![Képernyőkép_20230112_214937](https://user-images.githubusercontent.com/60664394/218133126-5c7311e3-a4bb-485b-8b92-d4b7fdd16486.png)
+![Képernyőkép 2023-03-03 183850](https://user-images.githubusercontent.com/60664394/222790237-19bc74c0-90dc-4f77-b1bf-974d9c4ddf95.png)
 ### Hosting: https://krisztinasamu.github.io/WebWizardWorld
