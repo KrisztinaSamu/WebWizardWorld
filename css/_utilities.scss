@@ -8,7 +8,7 @@
 }
 
 @mixin desktop992 {
-  @media (min-width: 992px) {
+  @media (min-width: 992px) and (min-height: 801px) {
     @content;
   }
 }
@@ -59,8 +59,8 @@
 }
 
 @mixin hover {
-  border-top: 4px solid $secondary-color;
-  border-bottom: 4px solid $secondary-color;
+  border-top: 3px solid $secondary-color;
+  border-bottom: 3px solid $secondary-color;
   cursor: pointer;
 }
 

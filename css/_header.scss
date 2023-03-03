@@ -1,8 +1,18 @@
+.logo_highlight,
+.menu-item,
+.date-item,
+.introduction-header {
+  @include linearGradient-text;
+}
+
 .cover {
-  height: 100vh;
   background: url(../pic/main_bg.jpg) no-repeat bottom;
   background-size: cover;
   opacity: 0.9;
+
+  @include desktop992 {
+    height: 100vh;
+  }
 }
 
 .overlay {
@@ -11,8 +21,7 @@
 }
 
 .header-nav {
-  padding: 1rem 1.5rem;
-  min-height: 10vh;
+  padding: 0.5rem 1.5rem;
 }
 
 .nav-container {
@@ -23,36 +32,28 @@
 }
 
 .logo {
-  cursor: pointer;
-
   &_h1 {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
 
   &_first-letter {
     font-family: "Josefin Sans", sans-serif;
-    font-size: 2.0625rem;
-    line-height: 4.375rem;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
 
-    @include mobileXS {
-      font-size: 1rem;
+    @include desktop992 {
+      font-size: 3rem;
+      line-height: 4.375rem;
     }
   }
 
   &_highlight {
+    font-size: 1.3rem;
     font-weight: bold;
     letter-spacing: 0.0625rem;
-    @include linearGradient-text;
-
-    @include mobileXS {
-      font-size: 0.8rem;
-    }
-
-    @include desktop768 {
-    }
 
     @include desktop992 {
-      font-size: 1.3rem;
+      font-size: 2rem;
     }
   }
 
@@ -112,8 +113,8 @@
   text-transform: uppercase;
   font-size: 1.3rem;
   font-weight: 600;
-  transition: 0.3s ease;
-  @include linearGradient-text;
+  transition: 0.4s ease;
+  line-height: 0;
 
   @include desktop768 {
     font-size: 1.4rem;
@@ -121,23 +122,34 @@
 }
 
 .menu-item:hover {
-  padding: 6px 0;
+  padding: 6px 0rem;
   margin: -6px 0.8rem;
   @include hover;
 }
 
 .date-item {
-  font-size: 2rem;
-  padding: 0.5rem;
-  border: 2px solid rgba(103, 221, 209, 1);
+  border-bottom: 1px solid rgba(103, 221, 209, 1);
+
+  @include desktop768 {
+    display: block;
+  }
 }
 
+.date-item:hover {
+  font-size: 2rem;
+  border-bottom: 1px solid rgba(103, 221, 209, 1);
+  border-top: none;
+}
+
+.date-item,
 .openMenu,
 .closeMenu {
   display: none;
   font-size: 2rem;
-  cursor: pointer;
+}
 
+.openMenu,
+.closeMenu {
   @include mobile {
     display: block;
   }
@@ -156,19 +168,21 @@
 
 .introduction {
   margin: 0;
-  max-height: 100%;
+
+  @include d_flex-jc_center;
+  flex-direction: column;
+
+  @include desktop992 {
+    height: 90vh;
+  }
 }
 
 .introduction {
   &-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin: 0 1rem;
-    @include desktop768 {
-      height: 90vh;
-    }
   }
 
   &-box {
@@ -179,7 +193,6 @@
     box-shadow: $general-box-shadow;
 
     @include desktop992 {
-      max-width: 70vw;
       margin: 2rem;
     }
 
@@ -191,9 +204,12 @@
   &-box-background {
     position: relative;
     background: #020117;
-    padding: 1rem;
 
     @include desktop768 {
+      padding: 2rem 4rem;
+    }
+
+    @include desktop1440 {
       padding: 5rem;
     }
   }
@@ -225,7 +241,6 @@
     text-transform: uppercase;
     margin: 2rem 0;
     text-align: center;
-    @include linearGradient-text;
 
     @include desktop768 {
       font-size: 3.5rem;
@@ -235,15 +250,11 @@
   }
 
   &-p {
+    font-size: 1.3rem;
     color: $light-bg;
     text-align: justify;
     padding: 1rem;
     line-height: 1.7;
-
-    font: {
-      size: 1.3rem;
-      weight: 600;
-    }
 
     @include desktop768 {
       font-size: 2.2rem;

@@ -5,12 +5,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
-  margin: 10px auto;
-  cursor: pointer;
+  padding: 0 0.8rem;
+  margin: 0.625rem auto;
   border: none;
   border-radius: 20px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.2rem;
 }
@@ -28,7 +27,7 @@
     font-size: 1.5rem;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 992px) and (min-height: 801px) {
   .btn-primary {
     width: 25%;
     font-size: 1.7rem;
@@ -39,11 +38,26 @@
   background: #010d1b;
 }
 
+.logo_highlight,
+.menu-item,
+.date-item,
+.introduction-header {
+  background: rgb(45, 163, 232);
+  background: linear-gradient(0deg, rgb(45, 163, 232) 7%, rgb(103, 221, 209) 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 .cover {
-  height: 100vh;
   background: url(../pic/main_bg.jpg) no-repeat bottom;
   background-size: cover;
   opacity: 0.9;
+}
+@media (min-width: 992px) and (min-height: 801px) {
+  .cover {
+    height: 100vh;
+  }
 }
 
 .overlay {
@@ -52,8 +66,7 @@
 }
 
 .header-nav {
-  padding: 1rem 1.5rem;
-  min-height: 10vh;
+  padding: 0.5rem 1.5rem;
 }
 
 .nav-container {
@@ -63,39 +76,28 @@
   align-items: center;
 }
 
-.logo {
-  cursor: pointer;
-}
 .logo_h1 {
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 .logo_first-letter {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 2.0625rem;
-  line-height: 4.375rem;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
 }
-@media (max-width: 300px) {
+@media (min-width: 992px) and (min-height: 801px) {
   .logo_first-letter {
-    font-size: 1rem;
+    font-size: 3rem;
+    line-height: 4.375rem;
   }
 }
 .logo_highlight {
+  font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: 0.0625rem;
-  background: rgb(45, 163, 232);
-  background: linear-gradient(0deg, rgb(45, 163, 232) 7%, rgb(103, 221, 209) 100%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
 }
-@media (max-width: 300px) {
+@media (min-width: 992px) and (min-height: 801px) {
   .logo_highlight {
-    font-size: 0.8rem;
-  }
-}
-@media (min-width: 992px) {
-  .logo_highlight {
-    font-size: 1.3rem;
+    font-size: 2rem;
   }
 }
 @media (max-width: 300px) {
@@ -129,7 +131,7 @@
     display: inline-block;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 992px) and (min-height: 801px) {
   .menu li {
     margin: 0 0.5rem;
   }
@@ -157,12 +159,8 @@
   text-transform: uppercase;
   font-size: 1.3rem;
   font-weight: 600;
-  transition: 0.3s ease;
-  background: rgb(45, 163, 232);
-  background: linear-gradient(0deg, rgb(45, 163, 232) 7%, rgb(103, 221, 209) 100%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+  transition: 0.4s ease;
+  line-height: 0;
 }
 @media (min-width: 768px) {
   .menu-item {
@@ -171,25 +169,35 @@
 }
 
 .menu-item:hover {
-  padding: 6px 0;
+  padding: 6px 0rem;
   margin: -6px 0.8rem;
-  border-top: 4px solid #2a9df4;
-  border-bottom: 4px solid #2a9df4;
+  border-top: 3px solid #2a9df4;
+  border-bottom: 3px solid #2a9df4;
   cursor: pointer;
 }
 
 .date-item {
-  font-size: 2rem;
-  padding: 0.5rem;
-  border: 2px solid rgb(103, 221, 209);
+  border-bottom: 1px solid rgb(103, 221, 209);
+}
+@media (min-width: 768px) {
+  .date-item {
+    display: block;
+  }
 }
 
+.date-item:hover {
+  font-size: 2rem;
+  border-bottom: 1px solid rgb(103, 221, 209);
+  border-top: none;
+}
+
+.date-item,
 .openMenu,
 .closeMenu {
   display: none;
   font-size: 2rem;
-  cursor: pointer;
 }
+
 @media (max-width: 768px) {
   .openMenu,
   .closeMenu {
@@ -209,20 +217,21 @@
 /************************/
 .introduction {
   margin: 0;
-  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 992px) and (min-height: 801px) {
+  .introduction {
+    height: 90vh;
+  }
 }
 
 .introduction-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin: 0 1rem;
-}
-@media (min-width: 768px) {
-  .introduction-container {
-    height: 90vh;
-  }
 }
 .introduction-box {
   display: flex;
@@ -232,9 +241,8 @@
   opacity: 0.8;
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5), 0 10px 10px rgba(0, 0, 0, 0.3);
 }
-@media (min-width: 992px) {
+@media (min-width: 992px) and (min-height: 801px) {
   .introduction-box {
-    max-width: 70vw;
     margin: 2rem;
   }
 }
@@ -246,9 +254,13 @@
 .introduction-box-background {
   position: relative;
   background: #020117;
-  padding: 1rem;
 }
 @media (min-width: 768px) {
+  .introduction-box-background {
+    padding: 2rem 4rem;
+  }
+}
+@media (min-width: 1440px) {
   .introduction-box-background {
     padding: 5rem;
   }
@@ -278,11 +290,6 @@
   text-transform: uppercase;
   margin: 2rem 0;
   text-align: center;
-  background: rgb(45, 163, 232);
-  background: linear-gradient(0deg, rgb(45, 163, 232) 7%, rgb(103, 221, 209) 100%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
 }
 @media (min-width: 768px) {
   .introduction-header {
@@ -292,12 +299,11 @@
   }
 }
 .introduction-p {
+  font-size: 1.3rem;
   color: #f5f5f5;
   text-align: justify;
   padding: 1rem;
   line-height: 1.7;
-  font-size: 1.3rem;
-  font-weight: 600;
 }
 @media (min-width: 768px) {
   .introduction-p {
@@ -311,7 +317,12 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-size: 1.1rem;
+}
+
+.contact-icon,
+.footer-text {
+  padding: 6px 0;
+  margin: 6px 1rem;
 }
 
 .footer-contacts {
@@ -320,15 +331,14 @@
 }
 
 .contact-icon {
-  margin: 6px 1rem;
-  transition: 0.3s ease;
+  transition: 0.4s ease;
 }
 
 .contact-icon:hover {
   padding: 6px 0;
   margin: -6px 1rem;
-  border-top: 4px solid #2a9df4;
-  border-bottom: 4px solid #2a9df4;
+  border-top: 3px solid #2a9df4;
+  border-bottom: 3px solid #2a9df4;
   cursor: pointer;
 }
 
@@ -343,12 +353,16 @@
 
 .footer-text {
   font-size: 1rem;
-  margin: 6px 1rem;
 }
 @media (min-width: 768px) {
   .footer-text {
     font-size: 1.3rem;
   }
+}
+
+.main-background {
+  background-image: url(../pic/wooden-bg.jpg);
+  background-size: cover;
 }
 
 .main-about,
@@ -474,15 +488,10 @@ textarea.form__input {
 }
 
 body {
-  font-family: "Manrope", sans-serif, Helvetica, sans-serif;
-  font-size: 1.3rem;
+  font: 28px/26px "Manrope", sans-serif, Helvetica, sans-serif;
   background-color: #EEEBEA;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   overflow-x: hidden;
-  letter-spacing: 1px;
-  line-height: 1.5;
+  letter-spacing: 0.64px;
 }
 
 h1,
@@ -491,9 +500,24 @@ h3,
 h4,
 h5,
 h6,
+p,
 .menu-item {
-  letter-spacing: 2px;
+  letter-spacing: 1.2px;
   line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+p {
+  font-size: 1.4rem;
 }
 
 a {
@@ -505,9 +529,22 @@ section {
   margin: 1rem 0.5rem;
 }
 
+.btn-primary,
+.logo,
+.openMenu,
+.closeMenu {
+  cursor: pointer;
+}
+
 .lineBreak:after {
   content: "\a";
   white-space: pre;
+}
+@media (min-width: 1440px) {
+  .lineBreak:after {
+    content: normal;
+    white-space: normal;
+  }
 }
 
 /**************************/
@@ -521,10 +558,8 @@ section {
 /********************/
 /***** Services *****/
 /********************/
-@media (min-width: 768px) {
-  .services-provided {
-    margin: 1.25rem 0;
-  }
+.services-provided {
+  margin-top: 0;
 }
 
 .container-services {
@@ -624,10 +659,10 @@ section {
 }
 @media (min-width: 768px) {
   .box-services {
-    margin: 0.7rem;
+    margin: 5rem 0;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 992px) and (min-height: 801px) {
   .box-services {
     width: 25rem;
   }
@@ -643,17 +678,8 @@ section {
   width: 100%;
   padding: 3rem 0;
 }
-.newsletter-h1, .newsletter-p {
+.newsletter-p {
   margin-bottom: 1rem;
-}
-.newsletter-h1 {
-  font-size: 1.6rem;
-  text-align: center;
-}
-@media (max-width: 300px) {
-  .newsletter-h1 {
-    font-size: 1.1rem;
-  }
 }
 @media (max-width: 300px) {
   .newsletter-p {
@@ -661,7 +687,7 @@ section {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (min-height: 801px) {
   .box-newsletter {
     max-width: 800px;
     margin: 0 auto;
@@ -705,18 +731,13 @@ section {
 /****************/
 /***** Gmap *****/
 /****************/
+.gmap {
+  margin: 0;
+  padding: 0 1rem;
+}
+
 .iframe-gmap {
   width: 100%;
   height: 28.125rem;
   border: 0;
-}
-
-.gmap-h1 {
-  font-size: 1rem;
-  margin: 1rem 0;
-}
-@media (min-width: 768px) {
-  .gmap-h1 {
-    font-size: 1.5rem;
-  }
 }/*# sourceMappingURL=main.css.map */

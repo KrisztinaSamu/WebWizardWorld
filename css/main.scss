@@ -14,18 +14,10 @@
 }
 
 body {
-  font: {
-    family: $first-font-family, Helvetica, sans-serif;
-    size: 1.3rem;
-  }
-
+  font: 28px/26px $first-font-family, Helvetica, sans-serif;
   background-color: $bg-color;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   overflow-x: hidden;
-  letter-spacing: 1px;
-  line-height: 1.5;
+  letter-spacing: 0.64px;
 }
 
 h1,
@@ -34,9 +26,24 @@ h3,
 h4,
 h5,
 h6,
+p,
 .menu-item {
-  letter-spacing: 2px;
+  letter-spacing: 1.2px;
   line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+p {
+  font-size: 1.4rem;
 }
 
 a {
@@ -48,9 +55,21 @@ section {
   margin: 1rem 0.5rem;
 }
 
+%btn,
+.logo,
+.openMenu,
+.closeMenu {
+  cursor: pointer;
+}
+
 .lineBreak:after {
   content: "\A";
   white-space: pre;
+
+  @include desktop1440 {
+    content: normal;
+    white-space: normal;
+  }
 }
 
 /**************************/
@@ -67,9 +86,7 @@ section {
 /********************/
 
 .services-provided {
-  @include desktop768 {
-    margin: 1.25rem 0;
-  }
+  margin-top: 0;
 }
 
 .container-services {
@@ -163,7 +180,7 @@ section {
   }
 
   @include desktop768 {
-    margin: 0.7rem;
+    margin: 05rem 0;
   }
 
   @include desktop992 {
@@ -181,18 +198,8 @@ section {
   width: 100%;
   padding: 3rem 0;
 
-  &-h1,
   &-p {
     margin-bottom: 1rem;
-  }
-
-  &-h1 {
-    font-size: 1.6rem;
-    text-align: center;
-
-    @include mobileXS {
-      font-size: 1.1rem;
-    }
   }
 
   &-p {
@@ -250,17 +257,13 @@ section {
 /***** Gmap *****/
 /****************/
 
+.gmap {
+  margin: 0;
+  padding: 0 1rem;
+}
+
 .iframe-gmap {
   width: 100%;
   height: 28.125rem;
   border: 0;
-}
-
-.gmap-h1 {
-  font-size: 1rem;
-  margin: 1rem 0;
-
-  @include desktop768 {
-    font-size: 1.5rem;
-  }
 }
