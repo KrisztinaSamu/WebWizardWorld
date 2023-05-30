@@ -5,19 +5,21 @@
   @include linearGradient-text;
 }
 
+.cover,
+.overlay,
+.nav-container {
+  height: 100%;
+}
+
 .cover {
   background: url(../pic/main_bg.jpg) no-repeat bottom;
   background-size: cover;
   opacity: 0.9;
 
-  @include desktop992 {
-    height: 100vh;
-  }
 }
 
 .overlay {
   background-color: #00000066;
-  height: 100%;
 }
 
 .header-nav {
@@ -25,7 +27,6 @@
 }
 
 .nav-container {
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,7 +43,7 @@
     line-height: 2.5rem;
 
     @include desktop992 {
-      font-size: 3rem;
+      font-size: 2.7rem;
       line-height: 4.375rem;
     }
   }
@@ -51,9 +52,13 @@
     font-size: 1.3rem;
     font-weight: bold;
     letter-spacing: 0.0625rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
 
     @include desktop992 {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
   }
 
@@ -107,6 +112,16 @@
   }
 }
 
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop768 {
+    flex-direction: row;
+  }
+}
+
 .menu-item {
   display: inline-block;
   margin: 6px 0.8rem;
@@ -129,19 +144,14 @@
 
 .date-item {
   border-bottom: 1px solid rgba(103, 221, 209, 1);
+  border-top: 1px solid rgba(103, 221, 209, 1);
 
   @include desktop768 {
     display: block;
+    font-size: 1.2rem;
   }
 }
 
-.date-item:hover {
-  font-size: 2rem;
-  border-bottom: 1px solid rgba(103, 221, 209, 1);
-  border-top: none;
-}
-
-.date-item,
 .openMenu,
 .closeMenu {
   display: none;
@@ -167,10 +177,10 @@
 /************************/
 
 .introduction {
-  margin: 0;
-
   @include d_flex-jc_center;
   flex-direction: column;
+  align-items: center;
+  margin: 0;
 
   @include desktop992 {
     height: 90vh;
@@ -183,25 +193,28 @@
     flex-direction: column;
     align-items: center;
     margin: 0 1rem;
+
+    @include desktop768 {
+      margin: 2rem;
+    }
   }
 
   &-box {
     @include d_flex-jc_center;
     flex-direction: column;
+    // min-height: 85vh;
     margin: 1rem;
     opacity: 0.8;
-    box-shadow: $general-box-shadow;
 
-    @include desktop992 {
+    @include desktop768 {
+      width: 70vw;
+      //height: 50vh;
       margin: 2rem;
-    }
-
-    @include desktop1440 {
-      max-width: 60vw;
     }
   }
 
   &-box-background {
+
     position: relative;
     background: #020117;
 
@@ -243,21 +256,21 @@
     text-align: center;
 
     @include desktop768 {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       font-weight: 600;
       margin: 3rem 0;
     }
   }
 
   &-p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: $light-bg;
     text-align: justify;
-    padding: 1rem;
+    padding: 0 1rem 1rem;
     line-height: 1.7;
 
     @include desktop768 {
-      font-size: 2.2rem;
+      font-size: 2rem;
       padding: 1.5rem;
       letter-spacing: 2.5px;
     }

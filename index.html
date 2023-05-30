@@ -37,14 +37,9 @@
                 <h1 class="logo_h1">
                   <a href="./index.html">
                     <span class="logo_highlight">
-                      <span class="logo_first-letter">W</span>eb<span
-                        class="lineBreak"
-                      ></span>
+                      <span class="logo_first-letter">W</span>eb<span></span>
                       <span class="logo_first-letter">W</span>izard<span
-                        class="lineBreak"
-                      ></span>
-                      <span class="logo_first-letter">W</span>orld<span
-                        class="lineBreak"
+                      ></span> <span class="logo_first-letter">W</span>orld<span
                       ></span>
                     </span>
                   </a>
@@ -53,13 +48,20 @@
 
               <div class="openMenu"><i class="fa fa-bars"></i></div>
               <div class="menu">
-                <ul>
+                <ul class="menu-list">
                   <li><a href="./index.html" class="menu-item">Főoldal</a></li>
                   <li><a href="./about.html" class="menu-item">Rólunk</a></li>
                   <li>
                     <a href="./contact.html" class="menu-item">Elérhetőség</a>
                   </li>
-                  <li class="date-item" id="date-today"></li>
+                  <li class="date-item" id="date-today">
+                    <ul>
+                      <li id="date-year"></li>
+                      <li id="date-mounth"></li>
+                      <li id="date-day"></li>
+                      <li id="date-name"></li>
+                    </ul>
+                  </li>
                 </ul>
                 <div class="closeMenu"><i class="fa fa-times"></i></div>
               </div>
@@ -70,7 +72,7 @@
               <div class="introduction-box">
                 <div class="introduction-box-background">
                   <h1 class="introduction-header">
-                    <span class="lineBreak">Weboldal </span> készítés
+                    <span class="lineBreak">Weboldal</span> készítés
                   </h1>
                   <p class="introduction-p">
                     Webfejlesztés, webdesign, weboldal karbantartás,
@@ -85,7 +87,7 @@
         </div>
       </header>
 
-      <main class="main-background">
+      <main class="main main-background">
         <section class="services-provided">
           <div class="container container-services">
             <div class="box box-services">
@@ -141,12 +143,14 @@
           <div class="container">
             <div class="box box-newsletter">
               <div class="box-header box-header-newsletter">
-                <h1>Iratkozzon fel hírlevelünkre, ha..</h1>
+                <h1 class="newsletter-h1">
+                  Iratkozzon fel hírlevelünkre, ha..
+                </h1>
                 <p class="newsletter-p">
                   ..szeretné jobban megismerni hogyan dolgozunk.
                 </p>
                 <p class="newsletter-p">
-                  ..értesülni szeretne újításainkról, akcióinkról .
+                  ..értesülni szeretne újításainkról, akcióinkról.
                 </p>
               </div>
               <form class="email" action="POST">
@@ -186,6 +190,10 @@
         <p class="footer-text">Copyright &copy; 2023</p>
       </footer>
     </div>
+    <script
+      async
+      src="https://cse.google.com/cse.js?cx=86e99afc3b7bd4f60"
+    ></script>
     <script src="./app.js"></script>
   </body>
 </html>

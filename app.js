@@ -20,5 +20,5 @@ let today = new Date();
 let month = `${today.getMonth() + 1 < 10 ? "0" : ""}${today.getMonth() + 1}`;
 let day = `${today.getDate() < 10 ? "0" : ""}${today.getDate()}`;
 let year = today.getFullYear();
-let fullDate = year + ". " + month + ". " + day + ".";
+let fullDate = year + "</br>" + month + "</br>" + day + "";
 document.getElementById("date-today").innerHTML = fullDate;
