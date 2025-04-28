@@ -228,7 +228,6 @@
 @media (min-width: 768px) {
   .introduction-container {
     margin: 2rem 0;
-    justify-content: flex-start;
   }
 }
 .introduction-box {
@@ -728,14 +727,6 @@ section {
   }
 }
 
-/*.box-newsletter,
-.box-header-newsletter {
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
-*/
 .email {
   width: 100%;
 }
