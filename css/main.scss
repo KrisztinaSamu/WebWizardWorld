@@ -35,7 +35,8 @@ p,
   line-height: 1.3;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin: 1rem 0rem;
 }
 
@@ -48,8 +49,8 @@ h2 {
   font-size: clamp(1.5rem, 3vw, 2.5rem);
 }
 
-p {
-  font-size: clamp(0.8rem, -0.057rem + 2.286vw, 2rem);
+p, .btn-primary_subscribe {
+  font-size: clamp(0.8rem, -0.057rem + 2.286vw, 1.6rem);
 }
 
 a {
@@ -241,14 +242,14 @@ section {
   align-items: center;
   padding: 3rem 0;
 
-  &-h1 {
+  &-h2 {
     @include mobileXS {
       font-size: 7vw;
     }
   }
 
   &-p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 
     @include mobileXS {
       font-size: 5vw;
@@ -260,21 +261,27 @@ section {
   @include desktop992 {
     width: 80%;
     margin: 0 auto;
-    padding: 25px;
   }
 }
 
 .box-header-newsletter {
+  margin: 0 auto 25px auto;
   height: auto;
   padding: 2.5rem;
+
+  @include desktop768 {
+    max-width: 50%;
+  }
 }
 
-.box-newsletter,
+/*.box-newsletter,
 .box-header-newsletter {
   flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
-
+*/
 .email {
   width: 100%;
 }
@@ -293,9 +300,7 @@ section {
 }
 
 .btn-primary_subscribe {
-  @include desktop768 {
-    width: 50%;
-  }
+  max-width: 50vw;
 }
 
 /****************/

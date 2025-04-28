@@ -5,13 +5,14 @@
 .container-grid {
   display: grid;
   grid-template-columns: auto;
+  grid-template-rows: auto;
   grid-template-areas:
     "img_1"
     "text_1"
     "img_2"
     "text_2";
   justify-content: center;
-  grid-row-gap: 1rem 1.5rem;
+  gap: 20px;
 
   @include desktop768 {
     grid-template-columns: auto auto;

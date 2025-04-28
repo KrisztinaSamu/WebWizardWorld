@@ -171,10 +171,14 @@
   &-container {
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
     align-items: center;
+    min-height: 90vh;
 
     @include desktop768 {
       margin: 2rem 0;
+      justify-content: flex-start;
     }
   }
 
@@ -185,15 +189,21 @@
     opacity: 0.8;
 
     @include desktop768 {
-      width: 70vw;
+      width: 50vw;
       margin: 2rem;
     }
   }
 
   &-box-background {
-
     position: relative;
     background: #020117;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: space-around;
 
     @include desktop768 {
       padding: 2rem 4rem;
@@ -239,7 +249,7 @@
   &-p {
     color: $light-bg;
     text-align: justify;
-    padding: 0 1rem 1rem;
+    padding: 2rem;
     line-height: 1.7;
 
     @include desktop768 {
